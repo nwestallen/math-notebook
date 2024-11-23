@@ -13,4 +13,6 @@
   ;; or call `clerk/show!` explicitly
   (clerk/show! "notebooks/mathnotes.clj")
 
+  (clerk/build-static-app! {:paths ["notebooks/mathnotes.clj"] :out-path "public"})
+
   )
