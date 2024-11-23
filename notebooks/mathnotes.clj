@@ -20,6 +20,14 @@
              [(tex "\\cos(x)"), (tex "\\frac{\\text{adjacent}}{\\text{hypotenuse}}")]
              [(tex "\\tan(x)"), (tex "\\frac{\\text{opposite}}{\\text{adjacent}} = \\frac{\\sin(x)}{\\cos(x)}")]])
 
+;;#### Angle Sum Formulas
+^{:nextjournal.clerk/visibility {:code :hide}}
+(make-table ["Formula"]
+            [[(tex "\\sin(\\alpha\\pm\\beta) = \\sin(\\alpha)\\cos(\\beta)\\pm\\cos(\\alpha)\\sin(\\beta)")]
+             [(tex "\\cos(\\alpha\\pm\\beta) = \\cos(\\alpha)\\cos(\\beta)\\mp\\sin(\\alpha)\\sin(\\beta)")]
+             [(tex "\\sin(2x) = (\\sin(x)+\\cos(x))^2 - 1 = 2\\sin(x)\\cos(x)")]
+             [(tex "\\cos(2x) = \\cos^2(x) - \\sin^2(x) = 2\\cos^2(x) - 1")]])
+
 ;;#### Reciprocal Functions
 ^{:nextjournal.clerk/visibility {:code :hide}}
 (make-table ["Function", "Definition"]
@@ -27,7 +35,7 @@
              [(tex "\\csc(x)"), (tex "\\frac{1}{\\sin(x)}")]
              [(tex "\\cot(x)"), (tex "\\frac{\\cos(x)}{\\sin(x)}")]])
 
-;;#### Pythagorean Identites
+;;#### Pythagorean Identities
 ^{:nextjournal.clerk/visibility {:code :hide}}
 (make-table ["Identity"]
             [[(tex "\\sin^2(x) + \\cos^2(x) = 1")]
@@ -43,7 +51,11 @@
              [(tex "\\tan(x)"), (tex "\\sec^2(x)")]
              [(tex "\\sec(x)"), (tex "\\sec(x)\\tan(x)")]
              [(tex "\\csc(x)"), (tex "-\\csc(x)\\cot(x)")]
-             [(tex "\\cot(x)"), (tex "-\\csc^2(x)")]])
+             [(tex "\\cot(x)"), (tex "-\\csc^2(x)")]
+             [(tex "\\arcsin(x)"), (tex "\\frac{1}{\\sqrt{1-x^2}}")]
+             [(tex "\\arccos(x)"), (tex "-\\frac{1}{\\sqrt{1-x^2}}")]
+             [(tex "\\arctan(x)"), (tex "\\frac{1}{1+x^2}")]
+             [(tex "\\text{arccot}(x)"), (tex "-\\frac{1}{1+x^2}")]])
 
 
 
