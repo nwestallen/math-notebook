@@ -1,5 +1,6 @@
 {:paths ["notebooks"]
- :deps {io.github.nextjournal/clerk {:mvn/version "0.17.1102"}}
+ :deps {io.github.nextjournal/clerk {:mvn/version "0.17.1102"}
+        org.clojure/clojure {:mvn/version "1.12.0"}}
  :aliases
  {:nextjournal/clerk
   {:exec-fn nextjournal.clerk/build!
