@@ -4,43 +4,46 @@
   {:nextjournal.clerk/toc true}
   (:require [nextjournal.clerk :as clerk :refer [tex]]))
 
+^{:nextjournal.clerk/visibility {:code :hide :result :hide}}
+(defn make-table [headers rows]
+  (clerk/html
+   [:table
+    [:tr.bg-slate-300 (for [h headers] [:th.border.border-gray-500.text-center h])]
+    (for [r rows] [:tr.bg-blue-50 (for [c r] [:td.border.border-gray-500 c])])]))
+
 ;;## Trigonometry
 
 ;;#### Primary Functions
 ^{:nextjournal.clerk/visibility {:code :hide}}
-(clerk/table {:head ["Function", "Definition"]
-              :rows [[(tex "\\sin(x)"), (tex "\\frac{\\text{opposite}}{\\text{hypotenuse}}")]
-                     [(tex "\\cos(x)"), (tex "\\frac{\\text{adjacent}}{\\text{hypotenuse}}")]
-                     [(tex "\\tan(x)"), (tex "\\frac{\\text{opposite}}{\\text{adjacent}} = \\frac{\\sin(x)}{\\cos(x)}")]]})
-
-(clerk/html [:table.bg-sky-500.text-left
-             [:tr [:th.text-center "Function"] [:th.text-center "Definition"]]
-             [:tr.bg-white [:td.border.border-gray (tex "\\sin(x)")] [:td.border.border-gray (tex "\\frac{\\text{opposite}}{\\text{adjacent}}")]]
-             [:tr [:td (tex "\\cos(x)")] [:td (tex "\\frac{\\text{adjacent}}{\\text{hypotenuse}}")]]])
+(make-table ["Function" "Definition"]
+            [[(tex "\\sin(x)"), (tex "\\frac{\\text{opposite}}{\\text{hypotenuse}}")]
+             [(tex "\\cos(x)"), (tex "\\frac{\\text{adjacent}}{\\text{hypotenuse}}")]
+             [(tex "\\tan(x)"), (tex "\\frac{\\text{opposite}}{\\text{adjacent}} = \\frac{\\sin(x)}{\\cos(x)}")]])
 
 ;;#### Reciprocal Functions
 ^{:nextjournal.clerk/visibility {:code :hide}}
-(clerk/table {:head ["Function", "Definition"]
-              :rows [[(tex "\\sec(x)"), (tex "\\frac{1}{\\cos(x)}")]
-                     [(tex "\\csc(x)"), (tex "\\frac{1}{\\sin(x)}")]
-                     [(tex "\\cot(x)"), (tex "\\frac{\\cos(x)}{\\sin(x)}")]]})
+(make-table ["Function", "Definition"]
+            [[(tex "\\sec(x)"), (tex "\\frac{1}{\\cos(x)}")]
+             [(tex "\\csc(x)"), (tex "\\frac{1}{\\sin(x)}")]
+             [(tex "\\cot(x)"), (tex "\\frac{\\cos(x)}{\\sin(x)}")]])
 
 ;;#### Pythagorean Identites
 ^{:nextjournal.clerk/visibility {:code :hide}}
-(clerk/table {:rows [[(tex "\\sin^2(x) + \\cos^2(x) = 1")]
-                     [(tex "1 + \\cot^2(x) = \\csc^2(x)")]
-                     [(tex "1 + \\tan^2(x) = \\sec^2(x)")]
-                     [(tex "\\sec^2(x) + \\csc^2(x) = \\sec^2(x)\\csc^2(x)")]]})
+(make-table ["Identity"]
+            [[(tex "\\sin^2(x) + \\cos^2(x) = 1")]
+             [(tex "1 + \\cot^2(x) = \\csc^2(x)")]
+             [(tex "1 + \\tan^2(x) = \\sec^2(x)")]
+             [(tex "\\sec^2(x) + \\csc^2(x) = \\sec^2(x)\\csc^2(x)")]])
 
 ;;#### Trigonometric Derivatives
 ^{:nextjournal.clerk/visibility {:code :hide}}
-(clerk/table {:head [(tex "\\bf f(x)"), (tex "\\bf f'(x)")]
-              :rows [[(tex "\\sin(x)"), (tex "\\cos(x)")]
-                     [(tex "\\cos(x)"), (tex"-\\sin(x)")]
-                     [(tex "\\tan(x)"), (tex"\\sec^2(x)")]
-                     [(tex "\\sec(x)"), (tex "\\sec(x)\\tan(x)")]
-                     [(tex "\\csc(x)"), (tex "-\\csc(x)\\cot(x)")]
-                     [(tex "\\cot(x)"), (tex "-\\csc^2(x)")]]})
+(make-table [(tex "\\bf f(x)"), (tex "\\bf f'(x)")]
+            [[(tex "\\sin(x)"), (tex "\\cos(x)")]
+             [(tex "\\cos(x)"), (tex "-\\sin(x)")]
+             [(tex "\\tan(x)"), (tex "\\sec^2(x)")]
+             [(tex "\\sec(x)"), (tex "\\sec(x)\\tan(x)")]
+             [(tex "\\csc(x)"), (tex "-\\csc(x)\\cot(x)")]
+             [(tex "\\cot(x)"), (tex "-\\csc^2(x)")]])
 
 
 
