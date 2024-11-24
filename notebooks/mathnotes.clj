@@ -15,14 +15,14 @@
 
 ;;#### Primary Functions
 ^{:nextjournal.clerk/visibility {:code :hide}}
-(make-table ["Function" "Definition"]
+(make-table [(tex "\\textbf{Function}"), (tex "\\textbf{Definition}")]
             [[(tex "\\sin(x)"), (tex "\\frac{\\text{opposite}}{\\text{hypotenuse}}")]
              [(tex "\\cos(x)"), (tex "\\frac{\\text{adjacent}}{\\text{hypotenuse}}")]
              [(tex "\\tan(x)"), (tex "\\frac{\\text{opposite}}{\\text{adjacent}} = \\frac{\\sin(x)}{\\cos(x)}")]])
 
 ;;#### Angle Sum Formulas
 ^{:nextjournal.clerk/visibility {:code :hide}}
-(make-table ["Formula"]
+(make-table [(tex "\\textbf{Formula}")]
             [[(tex "\\sin(\\alpha\\pm\\beta) = \\sin(\\alpha)\\cos(\\beta)\\pm\\cos(\\alpha)\\sin(\\beta)")]
              [(tex "\\cos(\\alpha\\pm\\beta) = \\cos(\\alpha)\\cos(\\beta)\\mp\\sin(\\alpha)\\sin(\\beta)")]
              [(tex "\\sin(2x) = (\\sin(x)+\\cos(x))^2 - 1 = 2\\sin(x)\\cos(x)")]
@@ -30,14 +30,14 @@
 
 ;;#### Reciprocal Functions
 ^{:nextjournal.clerk/visibility {:code :hide}}
-(make-table ["Function", "Definition"]
+(make-table [(tex "\\textbf{Function}"), (tex "\\textbf{Definition}")]
             [[(tex "\\sec(x)"), (tex "\\frac{1}{\\cos(x)}")]
              [(tex "\\csc(x)"), (tex "\\frac{1}{\\sin(x)}")]
              [(tex "\\cot(x)"), (tex "\\frac{\\cos(x)}{\\sin(x)}")]])
 
 ;;#### Pythagorean Identities
 ^{:nextjournal.clerk/visibility {:code :hide}}
-(make-table ["Identity"]
+(make-table [(tex "\\textbf{Identity}")]
             [[(tex "\\sin^2(x) + \\cos^2(x) = 1")]
              [(tex "1 + \\cot^2(x) = \\csc^2(x)")]
              [(tex "1 + \\tan^2(x) = \\sec^2(x)")]
