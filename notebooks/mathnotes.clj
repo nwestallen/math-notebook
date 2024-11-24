@@ -8,8 +8,8 @@
 (defn make-table [headers rows]
   (clerk/html
    [:table
-    [:tr.bg-slate-300 (for [h headers] [:th.border.border-gray-500.text-center h])]
-    (for [r rows] [:tr.bg-blue-50 (for [c r] [:td.border.border-gray-500 c])])]))
+    [:tr.bg-slate-300.dark:bg-slate-700.dark:text-white (for [h headers] [:th.border.border-gray-500.text-center.dark:border-white h])]
+    (for [r rows] [:tr.bg-blue-50.dark:bg-slate-500.dar:text-white (for [c r] [:td.border.border-gray-500.dark:border-white c])])]))
 
 ;;## Trigonometry
 
@@ -57,5 +57,27 @@
              [(tex "\\arctan(x)"), (tex "\\frac{1}{1+x^2}")]
              [(tex "\\text{arccot}(x)"), (tex "-\\frac{1}{1+x^2}")]])
 
+;;## Logarithms
+
+;;#### Definition
+^{:nextjournal.clerk/visibility {:code :hide}}
+(tex "\\log_{b}(y) = x \\Longleftrightarrow b^x = y")
+
+;;#### Identities
+^{:nextjournal.clerk/visibility {:code :hide}}
+(make-table [(tex "\\textbf{Identity}")]
+            [[(tex "b^{\\log_{b}(x)} = x")]
+             [(tex "\\log_{b}(b^x) = x")]
+             [(tex "\\log_{b}(1) = 0")]
+             [(tex "\\log_{b}(b) = 1")]])
+
+;;#### Properties
+^{:nextjournal.clerk/visibility {:code :hide}}
+(make-table [(tex "\\textbf{Properties}")]
+            [[(tex "\\log_{b}(xy) = \\log_{b}(x) + \\log_{b}(y)")]
+             [(tex "\\log_{b}\\left(\\frac{x}{y}\\right) = \\log_{b}(x) - \\log_{b}(y)")]
+             [(tex "\\log_{b}(x^y) = y\\log_{b}(x)")]
+             [(tex "\\log_{b}(\\sqrt[y]{x}) = \\frac{\\log_{b}(x)}{y}")]
+             [(tex "x^{\\log_{b}(y)} = y^{\\log_{b}(x)}")]])
 
 
