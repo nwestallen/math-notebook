@@ -1,4 +1,4 @@
-;;# Math Notes
+;;# Nick's Math Notes
 ^{:nextjournal.clerk/visibility {:code :hide}}
 (ns mathnotes
   {:nextjournal.clerk/toc true}
@@ -55,7 +55,10 @@
              [(tex "\\arcsin(x)"), (tex "\\frac{1}{\\sqrt{1-x^2}}")]
              [(tex "\\arccos(x)"), (tex "-\\frac{1}{\\sqrt{1-x^2}}")]
              [(tex "\\arctan(x)"), (tex "\\frac{1}{1+x^2}")]
-             [(tex "\\text{arccot}(x)"), (tex "-\\frac{1}{1+x^2}")]])
+             [(tex "\\text{arcsec}(x)"), (tex "\\frac{1}{|x|\\sqrt{x^2 - 1}}")]
+             [(tex "\\text{arccsc}(x)"), (tex "-\\frac{1}{|x|\\sqrt{x^2 - 1}}")]
+             [(tex "\\text{arccot}(x)"), (tex "-\\frac{1}{1+x^2}")]
+             ])
 
 ;;## Logarithms
 
@@ -79,5 +82,4 @@
              [(tex "\\log_{b}(x^y) = y\\log_{b}(x)")]
              [(tex "\\log_{b}(\\sqrt[y]{x}) = \\frac{\\log_{b}(x)}{y}")]
              [(tex "x^{\\log_{b}(y)} = y^{\\log_{b}(x)}")]])
-
 
