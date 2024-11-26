@@ -7,7 +7,7 @@
 ^{:nextjournal.clerk/visibility {:code :hide :result :hide}}
 (defn make-table [headers rows]
   (clerk/html
-   [:table
+   [:table.drop-shadow-md
     [:tr.bg-slate-300.dark:bg-slate-700.dark:text-white (for [h headers] [:th.border.border-gray-500.text-center.dark:border-white h])]
     (for [r rows] [:tr.bg-blue-50.dark:bg-slate-500.dar:text-white (for [c r] [:td.border.border-gray-500.dark:border-white c])])]))
 
@@ -83,3 +83,19 @@
              [(tex "\\log_{b}(\\sqrt[y]{x}) = \\frac{\\log_{b}(x)}{y}")]
              [(tex "x^{\\log_{b}(y)} = y^{\\log_{b}(x)}")]])
 
+;;## Vectors
+
+;;#### Operations
+^{:nextjournal.clerk/visibility {:code :hide}}
+(tex "\\text{Let } a = <a_1, a_2, ... , a_n > \\text{ and } \\:  b = <b_1, b_2, ... , b_n>")
+
+^{:nextjournal.clerk/visibility {:code :hide}}
+(make-table [(tex "\\textbf{Name}"), (tex "\\textbf{Definition}")]
+            [[(tex "\\text{Magnitude of } a"), (tex "||a|| = \\sqrt{a_1^2 + a_2^2 + ... + a_n^2}")]
+             [(tex "\\text{Sum of } a \\text{ and } b"), (tex "a + b = <a_1 + b_1, a_2 + b_2, ..., a_n + b_n>")]
+             [(tex "\\text{Dot Product of } a \\text{ and } b"), (tex "a \\cdot b = a_1(b_1) + a_2(b_2) + ... + a_n(b_n) = ||a||||b||\\cos(\\theta)")]
+             [(tex "\\text{Ange between } a \\text{ and } b"), (tex "\\theta = \\text{arcsin}\\left(\\frac{a \\cdot b}{||a|||b||}\\right)")]
+             [(tex "\\text{Cross Product of } a \\text { and } b"), (tex "a \\times b = ||a||||b||\\sin(\\theta)n,\\text{where } n \\text{ is unit nomral vector}")]
+             [(tex "\\text{Scalar projection of } a \\text{ onto } b"), (tex "\\text{comp}_b(a) = ||a||\\cos(\\theta) = \\frac{a \\cdot b}{||b||}")]
+             [(tex "\\text{Vector projection of } a \\text { onto } b"), (tex "\\text{proj}_b(a) = \\text{comp}_b(a)\\frac{b}{||b||} = \\frac{a \\cdot b}{b \\cdot b}b")]
+             ])
