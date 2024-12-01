@@ -11,6 +11,30 @@
     [:tr.bg-slate-300.dark:bg-slate-700.dark:text-white (for [h headers] [:th.border.border-gray-500.text-center.dark:border-white h])]
     (for [r rows] [:tr.bg-blue-50.dark:bg-slate-500.dar:text-white (for [c r] [:td.border.border-gray-500.dark:border-white c])])]))
 
+;;## Polynomials
+
+;;#### The Fundamental Theorem of Algebra
+;; Every non-constant single-variable polynomial with complex coefficients has at least one complex root and any degree n polynomial with complex coefficients has, counting multiplicity, exactly n complex roots.
+
+;;#### Factoring Quadratic Equations
+
+;;##### The Quadratic Formula
+;; $${\text{For an equation of the form }ax^2 + bx + c = 0:}$$
+
+;; $${x = \frac{-b\pm\sqrt{b^2-4ac}}{2a}}$$
+
+;; $${\text{The term } b^2 - 4ac \text{ is called the \bf{discriminant}}}$$
+
+;;##### Number of Real Roots
+^{:nextjournal.clerk/visibility {:code :hide}}
+(make-table
+ [(tex "\\textbf{Discriminant}"), (tex "\\textbf{Number of Roots}")]
+ [
+  [(tex "b^2 - 4ac < 0"), (tex "\\text{No real roots}")]
+  [(tex "b^2 - 4ac = 0"), (tex "\\text{One repeated root}")]
+  [(tex "b^2 - 4ac > 0"), (tex "\\text{Two distinct roots}")]
+  ])
+
 ;;## Trigonometry
 
 ;;#### Primary Functions
@@ -63,8 +87,7 @@
 ;;## Logarithms
 
 ;;#### Definition
-^{:nextjournal.clerk/visibility {:code :hide}}
-(tex "\\log_{b}(y) = x \\Longleftrightarrow b^x = y")
+;;$${\log_{b}(y) = x \Longleftrightarrow b^x = y}$$
 
 ;;#### Identities
 ^{:nextjournal.clerk/visibility {:code :hide}}
