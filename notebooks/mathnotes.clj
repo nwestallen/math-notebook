@@ -16,7 +16,7 @@
 ;;#### The Fundamental Theorem of Algebra
 ;; Every non-constant single-variable polynomial with complex coefficients has at least one complex root and any degree n polynomial with complex coefficients has, counting multiplicity, exactly n complex roots.
 
-;;#### Factoring Quadratic Equations
+;;#### Quadratic Equations
 
 ;;##### The Quadratic Formula
 ;; $${\text{For an equation of the form }ax^2 + bx + c = 0:}$$
@@ -28,12 +28,30 @@
 ;;##### Number of Real Roots
 ^{:nextjournal.clerk/visibility {:code :hide}}
 (make-table
- [(tex "\\textbf{Discriminant}"), (tex "\\textbf{Number of Roots}")]
+ [(tex "\\textbf{Discriminant}"), (tex "\\textbf{Number of  Real Roots}")]
  [
   [(tex "b^2 - 4ac < 0"), (tex "\\text{No real roots}")]
   [(tex "b^2 - 4ac = 0"), (tex "\\text{One repeated root}")]
   [(tex "b^2 - 4ac > 0"), (tex "\\text{Two distinct roots}")]
   ])
+
+;;##### Quadratic Identities
+^{:nextjournal.clerk/visibility {:code :hide}}
+(make-table
+ [(tex "\\textbf{Name}"), (tex "\\textbf{Identity}")]
+ [
+  [(tex "\\text{Difference of Squares}"), (tex "(a^2 - b^2) = (a+b)(a-b)")]
+  [(tex "\\text{Sum of Squares}"), (tex "(a^2 + b^2) = (a+bi)(a-bi)")]
+  ])
+
+;;##### Completing the Square
+
+;; $${\text{If } ax^2 + bx + c = (x+p)^2 \text{ then the equation can be manipulated algebraically}}$$
+
+;; $${\text{into the form } x^2 + 2px + p^2 = d \text{ where } d \text{ is some constant and } x + p = \pm \sqrt{d}}$$
+
+;;##### Leading Coefficient: Solving by Grouping
+
 
 ;;## Trigonometry
 
